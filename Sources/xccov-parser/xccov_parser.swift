@@ -1,6 +1,6 @@
 import Foundation
 
-class Parser {
+class XccovParser {
     func parse(_ fileName: String) {
         guard let contents = readFile(fileName) else {
             print("Could not parse coverage structure from \(fileName)")
@@ -102,7 +102,7 @@ protocol NamedCoverable: Coverable {
 
 if CommandLine.arguments.count > 1 {
     let fileName = CommandLine.arguments[1]
-    let parser = Parser()
+    let parser = XccovParser()
     parser.parse(fileName)
 } else {
     print("Please specify a filename as a command line argument")
