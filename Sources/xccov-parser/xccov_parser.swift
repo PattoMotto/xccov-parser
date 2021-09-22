@@ -1,4 +1,3 @@
-// to run: `swift parser.swift coverage.json`
 import Foundation
 
 class Parser {
